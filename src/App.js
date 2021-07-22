@@ -3,13 +3,16 @@
 import React from 'react';
 import './App.css';
 import Cars from './Cars';
+import Provider from './context/Provider';
 import TrafficSignal from './TrafficSignal';
 
 function App() {
   return (
     <div className="container">
-      <Cars />
-      <TrafficSignal />
+      <Provider>
+        <Cars />
+        <TrafficSignal />
+      </Provider>
     </div>
   );
 }
